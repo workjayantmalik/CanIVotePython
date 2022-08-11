@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your History</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Welcome to Can I Vote</h1>
+            <p>You will be able to view your history here.</p>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>IP</th>
+                    <th>AGE</th>
+                    <th>Voter Card Available</th>
+                    <th>Prediction</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                        <tr>
+                            <td>{{ record["ip"] }}</td>
+                            <td>{{ record["age"] }}</td>
+                            <td>{{ record["canvote"] }}</td>
+                            <td>{{ record["prediction"] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

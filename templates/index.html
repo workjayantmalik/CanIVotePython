@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Welcome to Can I Vote</h1>
+            <p>Hello, You are most awesome.</p>
+            <p>In case you are interested, You can <a href={{ url_for("history") }}>view your history here</a>.</p>
+        </section>
+        <section>
+            <form action="/predict" method="post">
+                <label for="age">
+                    <span>Enter Your age:</span>
+                    <input type="text" id="age" name="age" />
+                </label>
+                <label for="canvote">
+                    <span>Can You Vote:</span>
+                    <input type="checkbox" id="canvote" name="canvote" />
+                </label>
+                <button type="submit">Predict</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

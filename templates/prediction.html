@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Welcome to Can I Vote</h1>
+            <p>Hello, You are most awesome.</p>
+            {% if error %}
+                <p>{{ error }}</p>
+            {% endif %}
+
+            {% if canvote %}
+                <p>And we found out that you can vote.</p>
+            {% else %}
+                <p>But we would like to inform you that you will not be able to vote in these elections.</p>
+                <p>Here are conditions required to vote.</p>
+                <ul>
+                    <li>Your age must be at least 18 years.</li>
+                    <li>You must have a voter card to vote.</li>
+                    <li>You must provide us honest data.</li>
+                </ul>
+
+            {% endif %}
+            <p>And we are your friends, so spread these words: <strong>We should all vote.</strong></p>
+        </section>
+
+    </main>
+</body>
+</html>
